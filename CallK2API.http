@@ -1,0 +1,19 @@
+### Get K2 token
+POST https://login.onk2.com/9f62ac12-24bd-4e27-aee8-f8284f8a36ee/connect/token
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Cache-Control: no-cache
+Host: login.onk2.com
+Connection: keep-alive
+Content-Length: 150
+
+grant_type=client_credentials&client_id=idt.cc.0ZGK%2FNbDy5klk0%2BzRBrg2gRUNZBVFW2EJwjDhYhWzSA%3D&client_secret=VsNZ%258%23lwY%5EYEDB6Y1nuKanzceh5VHlv
+
+### bearer token
+POST https://login.windows.net/secureflow.co.uk/oauth2/token
+
+### Complete Server event
+post https://psemea.onk2.com/api/workflow/v1/serverEvents/{serialNumber}/finish
+Authorization: Basic 
+
+{}
