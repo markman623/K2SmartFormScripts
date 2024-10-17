@@ -1,0 +1,134 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Microsoft Translator API",
+      "description": "API for translating text using Microsoft Translator."
+    },
+    "host": "api.cognitive.microsofttranslator.com",
+    "basePath": "/translate",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/": {
+        "post": {
+          "parameters": [
+            {
+              "name": "api-version",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "default": "3.0"
+            },
+            {
+              "name": "to",
+              "in": "query",
+              "required": true,
+              "type": "string",
+              "default": "es-es"
+            },
+            {
+              "name": "Ocp-Apim-Subscription-Key",
+              "in": "header",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "Ocp-Apim-Subscription-Region",
+              "in": "header",
+              "required": true,
+              "type": "string",
+              "default": "eastus"
+            },
+            {
+              "name": "Content-Type",
+              "in": "header",
+              "required": true,
+              "type": "string",
+              "default": "application/json"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "array",
+                "items":{   "$ref": "#/definitions/TranslateRequest"}
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "array",
+                "items":{ "$ref": "#/definitions/TranslateResponse"}
+              },
+              "headers": {
+                "X-RequestId": {
+                  "type": "string"
+                },
+                "X-Metered-Usage": {
+                  "type": "integer"
+                },
+                "X-MT-System": {
+                  "type": "string"
+                },
+                "X-Content-Type-Options": {
+                  "type": "string"
+                },
+                "Strict-Transport-Security": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "TranslateRequest": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string"}
+          }
+        }
+      ,
+        "Translation": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+        }},
+        "detectedLanguage" :{
+            "type": "object",
+
+            "properties":{
+                "language" : {"type":"string"},
+                "score" : {"type":"number"}
+             }
+          },
+      "TranslateResponse": {
+          "type": "object",
+          "properties": {
+            "detectedLanguage": { "$ref":"#/definitions/detectedLanguage" },
+            "translations": {
+              "type": "array",
+              "items": {
+                    "$ref": "#/definitions/Translation"
+                }
+              }
+            }
+          }
+        }
+      }
+    
+
+  
+
+  

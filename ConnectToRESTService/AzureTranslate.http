@@ -1,0 +1,13 @@
+
+POST https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=es-es
+Ocp-Apim-Subscription-Key: e3d6ewertwertewrt
+Ocp-Apim-Subscription-Region: eastus
+Content-Type: application/json
+
+[{
+            'text': 'Here is an example'
+        },
+        
+        {
+            'text': 'Here is an anotehr example'
+        }]
