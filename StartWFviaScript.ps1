@@ -39,9 +39,12 @@ for ($i = 0; $i -lt 5; $++){
 Import-Module ActiveDirectory
 
 # Get all users in the domain
-$users = Get-ADUser -Filter * -Property DisplayName, EmailAddress, Department
+$users = Get-ADUser -Filter * -Property DisplayName, EmailAddress, Department, SamAccountName
 
 # Display the users
 foreach ($user in $users) {
     Write-Output "Name: $($user.DisplayName), Email: $($user.EmailAddress), Department: $($user.Department)"
+    $pi.Folio = "[Folio value]"
+    $pi.DataFields["IntegerDatafield"].Value = 1;
+    $pi.DataFields["StringDataField"].Value = "somevalue";
 }
