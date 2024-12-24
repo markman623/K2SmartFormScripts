@@ -1,1 +1,21 @@
 
+### Test a GET Method
+GET https://k2.denallix.com/api/odatav4/v4/Leave_Request?method=GetList
+Authorization: Basic Administrator:K2pass!
+
+### Test a POST Method
+POST https://k2.denallix.com/api/odatav4/v4/Leave_Request?method=Load
+Authorization: Basic Administrator:K2pass!
+Content-Type: application/json
+
+{"ID" : 2}
+
+### Test a POST Method
+POST https://k2.denallix.com/api/odatav4/v4/Leave_Request?method=Create
+Authorization: Basic Administrator:K2pass!
+Content-Type: application/json
+
+{
+  "Leave_Request_Title": "Test",
+  "Employee_Name": "Chancler Schulz"
+}
