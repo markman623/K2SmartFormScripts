@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+  * {
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  .theme-entry * { 
+    --main-font-family: "Noto Sans" !important;
+    --heading-font-family: "Noto Sans" !important;
+    --button-font-family: "Noto Sans" !important;
+    --input-rounding: 8px; 
+    --input-border-color: black;
+    --input-label-text-size: 12px;
+    --input-label-text-color: black;
+    --input-watermark-text-color: #8b8b8b;
+    --heading1-text-color: black;
+    --main-text-size: 16px;
+    --button-rounding: 50px; }
+
+  .theme-entry input.SFC.SourceCode-Forms-Controls-Web-TextBox {height:58px;}
+
+  .theme-entry .SFC.SourceCode-Forms-Controls-Web-TextBox.watermark, .theme-entry .input-control-watermark {
+    font-size: 16px;
+}
+
+.theme-entry h1 {
+    letter-spacing: -1.5px;
+}
+
+.theme-entry p {
+    font-size: 16px;
+}
+.theme-entry p.SourceCode-Forms-Controls-Web-Label.LabelWrap {
+    line-height: 24px;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button.button-primary {
+  font-weight: bold;
+}
+
+.theme-entry a.SourceCode-Forms-Controls-Web-Button{
+  height: 40px;
+}
