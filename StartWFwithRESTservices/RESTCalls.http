@@ -1,0 +1,37 @@
+### Get workflows
+GET https://k2.denallix.com/api/workflow/v1/workflows
+Authorization: Basic UserName:Password
+Accept: application/json
+
+### Get workflows
+POST https://k2.denallix.com/api/workflow/v1/workflows/30
+Authorization: Basic UserName:Password
+Content-Type: application/json
+
+{
+  "folio": "mark Test",
+  "priority" : 3,
+  "dataFields" : {
+    "TextVar" : "HelloWorld",
+    "NumberVar": 68686
+  }
+
+}
+
+### Get workflow
+GET https://k2.denallix.com/api/workflow/v1/workflows/16
+Authorization: Basic UserName:Password
+Accept: application/json
+
+### Start workflow
+POST https://k2.denallix.com/api/workflow/v1/workflows/16
+Authorization: Basic UserName:Password
+Content-Type: application/json
+
+{
+  "folio": "REST Client Basic Auth Example",
+  "dataFields": {
+    "TextVar": "John Doe",
+    "NumberVar": 987
+  }
+}
